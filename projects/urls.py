@@ -3,5 +3,5 @@ from .views import project_view
 
 
 urlpatterns = [
-    path('', project_view, name='list_projects')
+    path('', project_view, name='home')
 ]
