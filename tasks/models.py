@@ -10,7 +10,9 @@ class Task(models.Model):
     due_date = models.DateTimeField()
     is_completed = models.BooleanField(default=False)
     project = models.ForeignKey(
-        Project, related_name="tasks", on_delete=models.CASCADE,
+        Project,
+        related_name="tasks",
+        on_delete=models.CASCADE,
     )
     assignee = models.ForeignKey(
         settings.AUTH_USER_MODEL,
